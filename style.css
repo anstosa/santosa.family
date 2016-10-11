@@ -15,7 +15,7 @@ body {
 }
 
 .c-card {
-    background-color: white;
+    background: rgba(255,255,255,0.75);
     border: 1px solid #d8d8d8;
     border-bottom-width: 2px;
     border-radius: 2px;
@@ -27,7 +27,13 @@ body {
     width: calc(50% - 40px);
 }
 
+    .c-card p:last-child {
+        margin-bottom: 0;
+    }
+
 .c-card--full {
+    background: rgba(255,255,255,0.5);
+    text-align: center;
     width: calc(100% - 40px);
 }
 
@@ -37,21 +43,23 @@ body {
     }
 
     .c-card__title--float {
+        color: #fff;
         float: left;
-        margin-right: 15px;
+        text-shadow: 0 0 20px rgba(0,0,0,.5);
     }
 
     .c-card__photo {
-        background-size: 100%;
-        background-repeat: no-repeat;
-        background-position: center center;
+        background: no-repeat center center;
+        background-size: cover;
         border-bottom-left-radius: 3px;
         border-bottom-right-radius: 3px;
-        clear: left;
-        height: 400px;
+        height: 550px;
         margin: -19px;
-        margin-top: 25px;
         width: calc(100% + 38px);
+    }
+
+    .c-card--square .c-card__photo {
+        height: 300px;
     }
 
     .c-card--sarah .c-card__photo {
@@ -60,6 +68,14 @@ body {
 
     .c-card--ansel .c-card__photo {
         background-image: url(/Ansel.jpg);
+    }
+
+    .c-card--bingley .c-card__photo {
+        background-image: url(/Bingley.jpg);
+    }
+
+    .c-card--nox .c-card__photo {
+        background-image: url(/Nox.jpg);
     }
 
     .c-card__list {}
@@ -71,6 +87,10 @@ body {
 .c-button-group {
     float: right;
 }
+
+    .c-card__title--float ~ .c-button-group {
+        margin-right: -15px;
+    }
 
 .c-button {
     background: #718969;
